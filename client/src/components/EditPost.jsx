@@ -15,7 +15,7 @@ const EditPost = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   console.log(id)
-  const postPhoto = "http://localhost:4000/";
+  const postPhoto = "https://mern-blog-app-osbl.onrender.com/";
 
   useEffect(() => {
     const fetchPost = async () => {
