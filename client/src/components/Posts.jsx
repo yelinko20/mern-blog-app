@@ -8,7 +8,7 @@ import { Audio } from "react-loader-spinner";
 const PostList = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState([]);
-  const postPhoto = "http://localhost:4000/";
+  const postPhoto = "https://mern-blog-app-osbl.onrender.com/";
 
   useEffect(() => {
     const fetchPosts = async () => {
