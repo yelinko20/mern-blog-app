@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
- 
+
+.maskImage {
+  mask-image: linear-gradient(180deg, #000000, transparent);
 }
