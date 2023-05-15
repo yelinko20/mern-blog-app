@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { BASE_URL } from "../../apiConfig";
 import { Audio } from "react-loader-spinner";
 
-
 const PostList = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState([]);
@@ -22,11 +21,6 @@ const PostList = () => {
     };
     fetchPosts();
   }, []);
-
-  const extractFirst10Words = (content) => {
-    const words = content.split(" ");
-    return words.slice(0, 30).join(" ");
-  };
 
   if (isLoading) {
     return (
@@ -66,9 +60,9 @@ const PostList = () => {
             <div>{new Date(post.createdAt).toDateString()}</div>
           </div>
           <p
-            className="mt-2 text-gray-600"
+            className="mt-2 h-20 overflow-hidden text-gray-600 maskImage"
             dangerouslySetInnerHTML={{
-              __html: extractFirst10Words(post.content) + "...",
+              __html: post.content + "...",
             }}
           ></p>
           <Link to={`/${post._id}`}>
