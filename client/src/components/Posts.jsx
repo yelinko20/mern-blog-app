@@ -39,7 +39,7 @@ const PostList = () => {
   }
 
   return (
-    <div className="grid container mx-auto md:grid-cols-2 gap-6 pt-32 px-4 sm:px-0 pb-10">
+    <div className="grid container mx-auto grid-cols-1 md:grid-cols-2 gap-6 pt-32 px-4 sm:px-0 pb-10">
       {posts.map((post) => (
         <div key={post._id} className="bg-white p-6 rounded-lg shadow-md">
           <Link to={`/${post._id}`}>
